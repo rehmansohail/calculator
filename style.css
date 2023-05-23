@@ -3,20 +3,26 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: antiquewhite;
 }
 
 .calculator {
-    width: 200px;
+    width: 300px;
+    height: 270px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f5f5f5;
+    background-color: darkgrey;
   }
   input[type="text"] {
     width: 100%;
     margin-bottom: 10px;
+    height: 40px
   }
   input[type="button"] {
-    width: 48%;
+    width: 23%;
+    height: 40px;
     margin-bottom: 5px;
+    border-radius: 8px
   }
