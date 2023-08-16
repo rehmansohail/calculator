@@ -28,7 +28,6 @@ numsarr.forEach(number=>{
     let text=e.target.innerText
     n1+=text
     input.innerHTML=n1
-    console.log(n1)
     }
   })
 })
@@ -60,12 +59,18 @@ numsarr.forEach(number=>{
 //calculating the result
 const result = document.querySelector('#result')
 result.addEventListener('click',()=>{
+  if(isvalid()){
   let answer = operate(+n1,+n2,operation)
   temp.innerText=`${n1} ${operation} ${n2}`
-  input.innerText=answer
-  n1=answer
+  input.innerText=answer.toFixed(2)
+  n1=answer.toFixed(2)
   n2=''
   operation=''
+}else{
+  
+  alert('Invalid input, Reloading page')
+  location.reload()
+}
 })
 
 //clear button functionality
@@ -83,3 +88,18 @@ clear.addEventListener('click',()=>{
   }
   input.innerText=''
 })
+
+function isvalid(){
+  let c=0
+  for(let i=0;i<n1.length;i++){
+    if(n1[i]=='.')c++;
+  }
+  if(c>1)return false
+  c=0
+  for(let i=0;i<n2.length;i++){
+    if(n2[i]=='.')c++;
+  }
+  if(c>1)return false
+  return true
+  
+}
