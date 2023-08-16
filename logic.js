@@ -108,3 +108,20 @@ function isvalid(){
   return true
   
 }
+function changesign(num){
+  return -1*num
+}
+
+const sign =document.querySelector('#sign')
+sign.addEventListener('click',()=>{
+  let text=input.innerText
+  if(text==n1){
+    n1*=-1
+    text=n1
+  }
+  else if(text==n2){
+    n2*=-1
+    text=n2
+  }
+  input.innerText=text
+})
