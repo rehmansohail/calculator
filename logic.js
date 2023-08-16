@@ -25,6 +25,33 @@ const numsarr = Array.prototype.slice.call(numbers);
 numsarr.forEach(number=>{
   number.addEventListener('click',e=>{
     let text=e.target.innerText
-    console.log(text)
+    n1+=text
+    input.innerHTML=n1
   })
 })
+
+operation=""
+const ops = document.querySelectorAll('.amt')
+const opsarr = Array.prototype.slice.call(ops)
+opsarr.forEach(op=>{
+  op.addEventListener('click',e=>{
+    operation=e.target.innerText
+    console.log(operation)
+    temp.innerHTML=n1
+    input.innerHTML=operation
+  })
+})
+
+n2=""
+numsarr.forEach(number=>{
+  number.addEventListener('click',e=>{
+    if(operation !=""){
+    let text=e.target.innerText
+    n2+=text
+    temp.innerText=`${n1} ${operation}`
+    input.innerText=n2
+    }
+  })
+})
+
+
