@@ -28,6 +28,7 @@ numsarr.forEach(number=>{
     let text=e.target.innerText
     n1+=text
     input.innerHTML=n1
+    console.log(n1)
     }
   })
 })
@@ -65,4 +66,20 @@ result.addEventListener('click',()=>{
   n1=answer
   n2=''
   operation=''
+})
+
+//clear button functionality
+const clear = document.querySelector('#clear')
+clear.addEventListener('click',()=>{
+  let text = input.innerText
+  if(text==n1){
+    n1=''
+  }
+  else if(text==operation){
+    operation=''
+  }
+  else if(text==n2){
+    n2=''
+  }
+  input.innerText=''
 })
