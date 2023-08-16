@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>
-        <div class="calculator">
-            <input type="text" id="result" readonly>
-            <input type="button" value="1" onclick="appendNumber(1)">
-            <input type="button" value="2" onclick="appendNumber(2)">
-            <input type="button" value="3" onclick="appendNumber(3)">
-            <input type="button" value="4" onclick="appendNumber(4)">
-            <input type="button" value="5" onclick="appendNumber(5)">
-            <input type="button" value="6" onclick="appendNumber(6)">
-            <input type="button" value="7" onclick="appendNumber(7)">
-            <input type="button" value="8" onclick="appendNumber(8)">
-            <input type="button" value="9" onclick="appendNumber(9)">
-            <input type="button" value="0" onclick="appendNumber(0)">
-            <input type="button" value="+" onclick="appendOperator('+')">
-            <input type="button" value="-" onclick="appendOperator('-')">
-            <input type="button" value="*" onclick="appendOperator('*')">
-            <input type="button" value="/" onclick="appendOperator('/')">
-            <input type="button" value="=" onclick="calculate()">
-            <input type="button" value="Clear" onclick="clearResult()">
-          </div>
+    <div id="calculator">
+        <div id="input-wrap">
+            <div id="tmp">203+23</div>
+            <div id="input">226</div>
+        </div>
+        <div id="button-wrap">
+            <button id="all-clear">AC</button>
+            <button id="clear">C</button>
+            <button id="sign">+/-</button>
+            <button class="amt divide">/</button>
+    
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="amt times">*</button>
+    
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="amt minus">-</button>
+    
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="amt plus">+</button>
+    
+            <button class="number num-0">0</button>
+            <button id="dot">.</button>
+            <button id="result">=</button>
+        </div>
     </div>
     <script src="./logic.js"></script>
 </body>
