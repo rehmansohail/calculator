@@ -10,13 +10,16 @@ function operate(n1,n2,op){
   else if(op=='/')return divide (n1,n2)
 }
 
-//clear button working
+//allclear button working
 const allclear =document.querySelector('#all-clear')
 const temp = document.querySelector('#tmp')
 const input = document.querySelector('#input')
 allclear.addEventListener('click',()=>{
     temp.innerText=''
     input.innerText=''
+    n1=''
+    n2=''
+    op=''
 })
 //get numbers
 let n1=''
@@ -88,6 +91,8 @@ clear.addEventListener('click',()=>{
   }
   input.innerText=''
 })
+
+
 
 function isvalid(){
   let c=0
