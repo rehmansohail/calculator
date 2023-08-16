@@ -24,9 +24,11 @@ const numbers =document.querySelectorAll('.number')
 const numsarr = Array.prototype.slice.call(numbers);
 numsarr.forEach(number=>{
   number.addEventListener('click',e=>{
+    if(operation==''){
     let text=e.target.innerText
     n1+=text
     input.innerHTML=n1
+    }
   })
 })
 
@@ -54,4 +56,13 @@ numsarr.forEach(number=>{
   })
 })
 
-
+//calculating the result
+const result = document.querySelector('#result')
+result.addEventListener('click',()=>{
+  let answer = operate(+n1,+n2,operation)
+  temp.innerText=`${n1} ${operation} ${n2}`
+  input.innerText=answer
+  n1=answer
+  n2=''
+  operation=''
+})
